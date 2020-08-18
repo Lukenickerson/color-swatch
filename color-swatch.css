@@ -1,0 +1,75 @@
+.color-swatch {
+	display: inline-block;
+	padding: 0.1em 0.3em;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+.color-swatch-container {
+	display: inline-block;
+}
+
+.color-swatch-preview {
+	display: inline-block;
+	width: 1.1em;
+	height: 1.1em;
+	vertical-align: bottom;
+	border-radius: 1em;
+	border: solid 1px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+.color-swatch-ui { /* closed style */
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	transform: scale(0.1);
+	max-height: 0;
+	max-width: 0;
+	width: 90vw;
+	margin: -1em 0 0 0;
+	border: solid 1px rgba(0, 0, 0, 0.5);
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	border-radius: 10em;
+	overflow: hidden;
+	opacity: 0.8;
+	transition: all 0.5s ease-in-out;
+}
+
+.color-swatch-ui.open {
+	transform: scale(1);
+	max-height: 500px;
+	max-width: 600px;
+	margin: 0.5em 0 0 -300px;
+	opacity: 1;
+	box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.5);
+	border-radius: 0.3em;
+}
+
+	.color-swatch-ui ul {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+		.color-swatch-ui ul > div {
+			display: flex;
+			flex-direction: row;
+		}
+
+.color-swatch-selection {
+	height: 6em;
+	width: 100%
+}
+
+.color-swatch-option {
+	flex-grow: 1;
+	min-width: 1em;
+	height: 2em;
+	margin: 0;
+	cursor: pointer;
+}

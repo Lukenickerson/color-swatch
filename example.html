@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Swatch Example</title>
+	<meta charset="utf-8">
+	<meta name="description" content="color swatch">
+	<meta name="author" content="Luke Nickerson">
+	<link rel="stylesheet" href="example.css" />
+	<link rel="stylesheet" href="color-swatch.css" />
+</head>
+<body scroll="no">
+	<main>
+		<form>
+			<div>
+			<label for="color-swatch-1">Color Selection 1</label>
+			<select id="color-swatch-1" class="color-swatch">
+				<option value="#f2f0e5">#f2f0e5</option>
+				<option value="#b8b5b9">#b8b5b9</option>
+				<option value="#868188">#868188</option>
+				<option value="#646365">#646365</option>
+				<option value="#45444f">#45444f</option>
+				<option value="#3a3858">#3a3858</option>
+				<option value="#212123">#212123</option>
+				<option value="#352b42">#352b42</option>
+				<option value="#43436a">#43436a</option>
+				<option value="#4b80ca">#4b80ca</option>
+				<option value="#68c2d3">#68c2d3</option>
+				<option value="#a2dcc7">#a2dcc7</option>
+				<option value="#ede19e">#ede19e</option>
+				<option value="#d3a068">#d3a068</option>
+				<option value="#b45252">#b45252</option>
+				<option value="#6a536e">#6a536e</option>
+				<option value="#4b4158">#4b4158</option>
+				<option value="#80493a">#80493a</option>
+				<option value="#a77b5b">#a77b5b</option>
+				<option value="#e5ceb4">#e5ceb4</option>
+				<option value="#c2d368">#c2d368</option>
+				<option value="#8ab060">#8ab060</option>
+				<option value="#567b79">#567b79</option>
+				<option value="#4e584a">#4e584a</option>
+				<option value="#7b7243">#7b7243</option>
+				<option value="#b2b47e">#b2b47e</option>
+				<option value="#edc8c4">#edc8c4</option>
+				<option value="#cf8acb">#cf8acb</option>
+				<option value="#5f556a">#5f556a</option>
+			</select>
+		  </div>
+		  <div>
+			<label for="color-swatch-2">Color Selection 2</label>
+			<select id="color-swatch-2" class="color-swatch">
+				<option value="#000000">Black</option>
+				<option value="#55415f">Purple</option>
+				<option value="#646964">Gray</option>
+				<option value="#d77355">Orange</option>
+				<option value="#508cd7">Blue</option>
+				<option value="#64b964">Green</option>
+				<option value="#e6c86e">Yellow</option>
+				<option value="#dcf5ff">Near-White</option>
+			</select>
+		  </div>
+		</form>
+		<footer>
+			<div class="credits">
+				Coding by Luke Nickerson<br />
+				Uses the <a href="https://lospec.com/palette-list/cc-29">CC-29 palette by Alpha6</a>
+				and the
+				<a href="https://lospec.com/palette-list/dawnbringers-8-color">
+					8-color palette by Dawnbringer
+				</a><br />
+				Code available on <a href="https://github.com/Lukenickerson/color-swatch">GitHub</a>
+			</div>
+		</footer>
+	</main>
+	<div class="scripts">
+		<!-- <script src="./ColorSwatch.js" type="module"></script> -->
+		<script type="module">
+			import ColorSwatch from './ColorSwatch.js';
+			window.swatches = [
+				(new ColorSwatch('#color-swatch-1')).init(),
+				(new ColorSwatch('#color-swatch-2')).init()
+			];
+			console.log(window.swatches);
+		</script>
+	</div>
+</body>
+</html>
